@@ -1,0 +1,81 @@
+h1 {
+    text-align: center;
+    margin-top: 5rem;
+}
+.board-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -200px;
+    margin-left: -200px;
+    font-size: 0;
+    border: 1px solid black;
+}
+.board {
+    display: block;
+
+}
+.row {
+    display: block;
+}
+.row div {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color:#b09069 ;
+}
+.row div span  {
+    left: -50%;
+    position: absolute;
+    font-size: 1rem;
+}
+.row div span .right {
+}
+.row:first-of-type div span:first-of-type {
+    left: 40%;
+    top: -40%;
+}
+.row:nth-child(2n) div:nth-child(2n+1) {
+    background-color: black;
+}
+.row:nth-child(2n+1) div:nth-child(2n) {
+    background-color: black;
+}
+.row:not(:first-of-type):not(:last-of-type) div:last-of-type span {
+    top: 10%;
+    left: 120%;
+}
+.row:first-of-type div:last-of-type span:last-of-type {
+    top: 10%;
+    left: 120%;
+}
+.row:last-of-type div:last-of-type span:last-of-type {
+    top: 10%;
+    left: 120%;
+}
+.row:last-of-type div span:first-of-type {
+    left: 40%;
+    bottom: -40%;
+}
+.row:first-of-type div:hover {
+    background-color: red;
+}
+.row:last-of-type div:hover {
+    background-color: red;
+}
+.row:not(:first-of-type):not(:last-of-type) div:hover {
+    background-color: red;
+}
+.row:first-of-type div:first-of-type span:not(:first-of-type) {
+    left: -40%;
+    top: 15%;
+}
+.row:not(:first-of-type):not(:last-of-type) div:first-of-type span {
+    left:-40%;
+    top: 15%;
+}
+.row:last-of-type div:first-of-type span:not(:first-of-type) {
+    left: -40%;
+    top: 15%;
+}
